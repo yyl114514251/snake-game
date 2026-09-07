@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="贪吃蛇小游戏 - 经典网页版，支持键盘与触屏操作" />
+  <title>贪吃蛇 · Snake</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐍</text></svg>" />
+</head>
+<body>
+  <div class="game-wrap">
+    <header class="game-header">
+      <h1 class="title">🐍 贪吃蛇</h1>
+      <div class="stats">
+        <div class="stat-box">
+          <span class="stat-label">得分</span>
+          <span class="stat-value" id="score">0</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-label">最高分</span>
+          <span class="stat-value" id="best">0</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-label">长度</span>
+          <span class="stat-value" id="length">3</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="board-wrap">
+      <canvas id="board" width="600" height="600"></canvas>
+      <div class="overlay hidden" id="overlay">
+        <div class="overlay-card">
+          <h2 id="overlay-title">游戏暂停</h2>
+          <p id="overlay-desc">按空格键或点击继续</p>
+          <button class="btn" id="restart-btn">重新开始</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls" id="controls">
+      <div class="dpad">
+        <button class="d-btn up" data-dir="up" aria-label="上">▲</button>
+        <button class="d-btn left" data-dir="left" aria-label="左">◀</button>
+        <button class="d-btn down" data-dir="down" aria-label="下">▼</button>
+        <button class="d-btn right" data-dir="right" aria-label="右">▶</button>
+      </div>
+      <div class="hint">
+        <p>键盘：方向键 / WASD 控制，空格暂停</p>
+        <p>手机：滑动屏幕或点击方向键</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
